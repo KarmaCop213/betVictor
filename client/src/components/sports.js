@@ -3,13 +3,11 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import { getSports } from '../api/data';
-import { useAppContext } from '../appContext'
 
 
 function Sports() {
   const [route] = React.useState(useRouteMatch());
   const [sportsHtml, setSportsHtml] = React.useState([]);
-  const [myTranslations] = React.useState(useAppContext())
 
   React.useEffect(() => {
     createSportsList();
@@ -26,7 +24,7 @@ function Sports() {
 
   return (
     <div className="sports">
-      <h2>{myTranslations.sports}</h2>
+      <h2>Sports</h2>
 
       <ul>
         {sportsHtml}
