@@ -6,7 +6,7 @@ import {
 import { getSports } from '../api/data';
 
 function Sports() {
-  const [route, setRoute] = React.useState(useRouteMatch());
+  const [route] = React.useState(useRouteMatch());
   const [sportsHtml, setSportsHtml] = React.useState([]);
 
   React.useEffect(() => {
@@ -17,7 +17,7 @@ function Sports() {
     const sports = await getSports();
     setSportsHtml(sports.map((item, i) => (
       <li key={i}>
-        <Link to={`${route.url}/${item.id}`}>{item.desc}</Link>
+        <a href={`${route.url}/${item.id}`}>{item.desc}</a>
       </li>
     )));
   }

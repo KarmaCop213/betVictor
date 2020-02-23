@@ -13,21 +13,19 @@ import './App.css';
 export default function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/sports" exact component={Sports}></Route>
-          <Route path="/sports/:sportId" exact component={Events}></Route>
-          <Route path="/sports/:sportId/events/:eventId" exact component={Outcomes}></Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/sports" exact component={Sports}></Route>
+        <Route path="/sports/:sportId" exact component={Events}></Route>
+        <Route path="/sports/:sportId/events/:eventId" exact component={Outcomes}></Route>
+      </Switch>
     </Router>
   );
 }
 
 const Home = () => (
   <div>
-    <Link to="/sports">Sports</Link>
+    <a href="/sports">Sports</a>
   </div>
 )
 

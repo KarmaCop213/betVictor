@@ -120,7 +120,7 @@ const markets2 = [
   }
 ]
 
-fdescribe('getSports', () => {
+describe('getSports', () => {
   it('should get expected data format', async () => {
     axios.get.mockImplementationOnce(() => Promise.resolve(data));
 
@@ -134,7 +134,7 @@ fdescribe('getSports', () => {
   });
 });
 
-fdescribe('getEvents', () => {
+describe('getEvents', () => {
   it('should get expected data format', async () => {
     data.data.sports[0].comp = comp;
 
@@ -157,7 +157,7 @@ fdescribe('getEvents', () => {
   });
 });
 
-fdescribe('getOutcomes', () => {
+describe('getOutcomes', () => {
   it('should get expected data format', async () => {
     data.data.sports[0].comp = comp;
 

@@ -23,7 +23,7 @@ function Events() {
 
     setEventsHtml(response.events.map((item, i) => (
       <li key={i}>
-        <Link to={`${route.url}/events/${item.id}`}>{item.desc}</Link>
+        <a href={`${route.url}/events/${item.id}`}>{item.desc}</a>
       </li>
     )));
   }
