@@ -5,9 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Sports from './sports';
-import Events from './events';
-import Outcomes from './outcomes';
+import Sports from './components/sports';
+import Events from './components/events';
+import Outcomes from './components/outcomes';
 import './App.css';
 
 export default function App() {
