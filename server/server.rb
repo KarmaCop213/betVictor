@@ -2,7 +2,7 @@ require 'httparty'
 require 'sinatra'
 
 before do
-  response.headers['Access-Control-Allow-Origin'] = '*'
+  response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
 end
 
 get '/data' do
