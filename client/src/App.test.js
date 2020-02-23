@@ -19,11 +19,11 @@ afterEach(() => {
   container = null;
 });
 
-describe('Sports', () => {
-  it("renders without crashing", async () => {
+describe('App', () => {
+  it("renders the sports page by default", async () => {
     await act(async () => {
       render(<App />, container);
     });
-    expect(container.querySelector("div a").getAttribute('href')).toEqual('/sports')
+    expect(container.querySelector("div.sports").textContent).toEqual('Sports')
   })
 });
