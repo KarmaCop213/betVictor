@@ -3,7 +3,6 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import Sports from "./sports";
 import { getSports } from '../api/data';
-import * as AppContext from '../appContext'
 
 jest.mock('../api/data');
 jest.mock('react-router-dom', () => ({
@@ -29,10 +28,6 @@ describe('Sports', () => {
       { id: 2, desc: 'sport 2', pos: 2 },
       { id: 1, desc: 'sport 1', pos: 1 }
     ]
-
-    jest
-      .spyOn(AppContext, 'useAppContext')
-      .mockImplementation(() => { return { sports: 'Sports' } })
 
     getSports.mockImplementation(() => Promise.resolve(fakeSports))
 
