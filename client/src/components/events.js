@@ -21,7 +21,7 @@ function Events() {
       <h2>{response.sportDesc} Events</h2>
     ))
 
-    setEventsHtml(response.events.map((item, i) => (
+    setEventsHtml(response.events.sort((a, b) => a.pos - b.pos).map((item, i) => (
       <li key={i}>
         <a href={`${route.url}/events/${item.id}`}>{item.desc}</a>
       </li>

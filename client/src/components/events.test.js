@@ -34,8 +34,8 @@ describe('Events', () => {
     const fakeEvents = {
       sportDesc: "Sport",
       events: [
-        { id: 1, desc: 'event 1' },
-        { id: 2, desc: 'event 2' },
+        { id: 2, desc: 'event 2', pos: 2 },
+        { id: 1, desc: 'event 1', pos: 1 }
       ]
     }
 

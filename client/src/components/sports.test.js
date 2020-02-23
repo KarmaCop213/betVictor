@@ -27,8 +27,8 @@ afterEach(() => {
 describe('Sports', () => {
   it("renders without crashing", async () => {
     const fakeSports = [
-      { id: 1, desc: 'sport 1' },
-      { id: 2, desc: 'sport 2' }
+      { id: 2, desc: 'sport 2', pos: 2 },
+      { id: 1, desc: 'sport 1', pos: 1 }
     ]
 
     getSports.mockImplementation(() => Promise.resolve(fakeSports))

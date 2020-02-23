@@ -15,7 +15,7 @@ function Sports() {
 
   async function createSportsList() {
     const sports = await getSports();
-    setSportsHtml(sports.map((item, i) => (
+    setSportsHtml(sports.sort((a, b) => a.pos - b.pos).map((item, i) => (
       <li key={i}>
         <a href={`${route.url}/${item.id}`}>{item.desc}</a>
       </li>

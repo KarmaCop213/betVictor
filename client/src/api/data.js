@@ -7,14 +7,14 @@ let getDataResponse = async () => {
 
 let getSports = async () => {
   const response = await getDataResponse();
-  return response.data.sports.map(o => { return { id: o.id, desc: o.desc }; });
+  return response.data.sports.map(o => { return { id: o.id, desc: o.desc, pos: o.pos }; });
 }
 
 let getEvents = async (sportId) => {
   const intSportId = parseInt(sportId);
   const response = await getDataResponse();
   let events = response.getSport(intSportId).comp.reduce((acc, val) => {
-    return acc.concat(val.events.map(o => { return { id: o.id, desc: o.desc } }))
+    return acc.concat(val.events.map(o => { return { id: o.id, desc: o.desc, pos: o.pos } }))
   }, [])
   let sportDesc = response.getSport(intSportId).desc
   return { sportDesc, events }
